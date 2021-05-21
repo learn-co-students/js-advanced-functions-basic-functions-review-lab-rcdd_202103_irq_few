@@ -15,18 +15,26 @@ function wrapAdjective(wrapper='*') {
 
 let Calculator;
 Calculator = {
-  add: function(x, y){return x+y},
-  subtract: function(x,y){return x-y},
-  multiply: function(x,y){return x*y},
-  devide: function(x,y){return x/y},
+  add: function(x, y){
+    return x+y
+  },
+  subtract: function(x,y){
+    return x-y
+  },
+  multiply: function(x,y){
+    return x*y
+  },
+  devide: function(x,y){
+    return x/y
+  },
 }
 
 function actionApplyer(start, fncs=[]) {
-  return !fncs ? start : fncs.forEach()
+  if (!(fncs.length)) return start
   
-  if (!fncs.length) return start
-  
-  fncs.forEach(fnc => fnc(start))
+  for(let i = 0; i < fncs.length; i++){
+    start = fncs[i](start)
+  }
   
   return start
 }
