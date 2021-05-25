@@ -13,20 +13,19 @@ function wrapAdjective(wrapper='*') {
   }
 }
 
-let Calculator;
-Calculator = {
-  add: function(x, y){
-    return x+y
+const Calculator = {
+  add: function(a,b) {
+    return a + b;
   },
-  subtract: function(x,y){
-    return x-y
+  subtract: function(a,b) {
+    return a - b
   },
-  multiply: function(x,y){
-    return x*y
+  multiply: function(a,b) {
+    return a * b
   },
-  devide: function(x,y){
-    return x/y
-  },
+  divide: function(a,b) {
+    return a / b;
+  }
 }
 
 function actionApplyer(start, fncs=[]) {
